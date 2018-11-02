@@ -16,5 +16,44 @@ $legal-color: #2c2c2c;
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Lora', serif;
 
+@mixin primary-font($size){
+    font-family: 'Roboto', sans-serif;
+    color: $typography-color;
+    font-weight: bold;
+    font-size: $size;
+}
 
+@mixin secondary-font($size){
+    font-family: 'Lora', serif;
+    color: $typography-color;
+    font-weight: 400;
+    font-size: $size;
+}
+
+// Base Styles
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $typography-color;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+img {
+    display: block;
+}
+
+li,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    text-decoration: none;
+}
 
