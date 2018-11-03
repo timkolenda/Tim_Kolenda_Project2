@@ -1,0 +1,15 @@
+
+
+.blog {
+    background: $primary-background-color;
+    & .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__aside {
+        width: 30%;
+    }
+    &__main {
+        width: 68%;
+    }
+}

@@ -1,0 +1,16 @@
+
+
+.tile {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    &__heading {
+        @extend .section-blurb__heading;
+        &--small {
+            @extend .section-blurb__heading--small;
+        }
+        &--large {
+            @extend .section-blurb__heading--large;
+        }
+    }
+}

@@ -190,6 +190,11 @@ a {
   line-height: 32px;
   padding-bottom: 40px; }
 
+.tile {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px; }
+
 .header-nav {
   background: #f6a823;
   font-family: 'Roboto', sans-serif;
@@ -317,16 +322,16 @@ a {
     display: flex; }
   .section-blurb--grey {
     background-color: #f0efed; }
-  .section-blurb__heading {
+  .section-blurb__heading, .tile__heading {
     text-transform: uppercase;
     padding: 0 0 10px 0; }
-    .section-blurb__heading--large {
+    .section-blurb__heading--large, .tile__heading--large {
       font-family: 'Roboto', sans-serif;
       color: #4f4f4f;
       font-weight: bold;
       text-decoration: none;
       font-size: 4.2rem; }
-    .section-blurb__heading--small {
+    .section-blurb__heading--small, .tile__heading--small {
       font-family: 'Roboto', sans-serif;
       color: #4f4f4f;
       font-weight: bold;
@@ -452,3 +457,31 @@ a {
   max-width: 31%;
   min-width: 300px;
   padding-bottom: 20px; }
+
+.blog {
+  background: #f0efed; }
+  .blog .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .blog__aside {
+    width: 30%; }
+  .blog__main {
+    width: 68%; }
+
+.tile {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px; }
+
+.legal {
+  background: #2c2c2c;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2; }
+  .legal p {
+    margin: 0; }
