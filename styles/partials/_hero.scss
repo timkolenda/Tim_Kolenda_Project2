@@ -1,0 +1,47 @@
+
+
+
+.hero {
+    &--index {
+        background-color: $primary-color;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+    &--index-flex-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__element--primary {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            background-image: url(../assets/circle-text.png);
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 250px;
+            position: absolute; 
+            top: -37px;
+            left: -54px;
+        }
+    }
+    &__element--image {
+        width: 45.6%;
+        box-shadow: 20px 20px #fff;
+        position: relative;
+        top: 40px
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    &--index {
+        @include secondary-font(12rem);
+        
+    }
+}

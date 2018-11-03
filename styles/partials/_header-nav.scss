@@ -1,0 +1,26 @@
+
+
+.header-nav {
+    background: $primary-color;
+    @include primary-font(2rem);
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+    &__item {
+        display: flex;
+        list-style: none;
+        margin: none;
+        &--logo {
+            padding: 0 20px;
+            list-style: none;
+            @include secondary-font(3rem);     
+        }    
+    }
+    &__item-link {
+        padding: 10px 20px;
+    }
+}
+
