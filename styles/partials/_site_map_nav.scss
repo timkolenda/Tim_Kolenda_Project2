@@ -1,0 +1,35 @@
+
+
+.site-map-nav {
+    background: $primary-background-color;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 0;        
+    }
+    &__item {
+        flex: 1 0 450px;
+        list-style: none;
+        padding-left: 30px;
+    }
+    &__icon-and-blurb {
+        display: flex;        
+    }
+    &__icon {
+        display: flex;
+        padding-right: 20px;        
+        & .icon {
+            background: $primary-color;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    & .section-blurb {
+        padding: 0;
+    }
+}
+

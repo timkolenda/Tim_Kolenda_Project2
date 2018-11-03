@@ -1,0 +1,17 @@
+
+
+.gallery {
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 100px 0;
+    }
+    &__item {
+        flex-grow: 1;
+        max-width: 31%;
+        min-width: 300px;
+        padding-bottom: 20px;
+    }
+
+}

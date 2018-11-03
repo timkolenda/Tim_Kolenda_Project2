@@ -4,9 +4,22 @@
 .hero {
     &--index {
         background-color: $primary-color;
-        height: 80vh;
         display: flex;
         align-items: center;
+    }
+    &--blog,
+    &--contact {
+        background-image: url(../assets/blog-image-1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+        display: flex;
+        align-items: flex-end;
+        // position: relative;
+    }
+    &--contact {
+        background-image: url(../assets/contact-image-1.jpg);
     }
     &--index-flex-wrapper {
         display: flex;
@@ -30,6 +43,11 @@
             left: -54px;
         }
     }
+    &__element--secondary {
+        position: relative;
+        top: 30px;
+        
+    }
     &__element--image {
         width: 45.6%;
         box-shadow: 20px 20px #fff;
@@ -43,5 +61,11 @@
     &--index {
         @include secondary-font(12rem);
         
+    }
+    &--blog,
+    &--contact {
+        @include secondary-font(8rem);
+        position: relative;
+        top: 20px;
     }
 }
