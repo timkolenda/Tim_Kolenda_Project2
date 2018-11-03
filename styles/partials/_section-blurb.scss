@@ -1,0 +1,21 @@
+
+
+.section-blurb {
+    padding: 100px 0 120px 0;
+    & wrapper {
+        display: flex;
+    }
+    &--grey {
+        background-color: $primary-background-color;
+    }
+    &__heading {
+        text-transform: uppercase;
+        padding: 0 0 10px 0;
+        &--large {
+            @include primary-font(4.2rem)
+        }
+        &--small {
+            @include primary-font(3.2rem)
+        }
+    }
+}
