@@ -157,3 +157,13 @@
         }
     }
 }
+
+@media (max-width: 440px){
+    .blog-preview .section-blurb__heading {
+        margin-bottom: 40px;
+    }
+    
+    .blog-preview .paragraph {
+        display: none;
+    }
+}

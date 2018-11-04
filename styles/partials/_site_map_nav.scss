@@ -11,6 +11,12 @@
         flex: 1 0 450px;
         list-style: none;
         padding-left: 30px;
+        &:hover .section-blurb__heading{
+            border-bottom: 4px solid $secondary-accent-color;
+        }
+        &:hover .site-map-nav__icon .icon {
+            background-color: $secondary-accent-color;
+        }
     }
     &__icon-and-blurb {
         display: flex;        
@@ -30,6 +36,45 @@
     }
     & .section-blurb {
         padding: 0;
+        &__heading {
+            border-bottom: 4px solid $primary-background-color;
+        }
     }
 }
+
+@media (max-width: 700px) {
+    .site-map-nav {
+        text-align: center;
+        &__list {
+            padding: 40px 0;
+        }
+        &__item {
+            position: relative;
+            padding: none;
+        }
+        &__icon { 
+            position: absolute;
+        }
+    }
+
+    li.site-map-nav__item {
+        padding: none;
+    }    
+}
+
+@media (max-width: 500px) {
+    .site-map-nav__icon{
+        position: static;
+    }
+
+
+
+    .site-map-nav .section-blurb {
+        margin-bottom: 20px;
+        & .paragraph {
+            display: none;
+        }
+    }
+}
+
 
