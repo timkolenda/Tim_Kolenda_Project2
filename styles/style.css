@@ -316,10 +316,18 @@ a {
 
 .section-blurb {
   padding: 100px 0 120px 0; }
-  .section-blurb wrapper {
+  .section-blurb .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .section-blurb__image {
+    width: 30%;
+    height: 100%;
+    margin-right: 40px;
+    -webkit-box-shadow: 20px 20px #f6a823;
+    box-shadow: 20px 20px #f6a823; }
+  .section-blurb__contents--beside-image {
+    width: 65%; }
   .section-blurb--grey {
     background-color: #f0efed; }
   .section-blurb__heading, .tile__heading {

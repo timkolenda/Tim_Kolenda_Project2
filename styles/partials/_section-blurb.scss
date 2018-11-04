@@ -2,8 +2,20 @@
 
 .section-blurb {
     padding: 100px 0 120px 0;
-    & wrapper {
+    & .wrapper {
         display: flex;
+    }
+    &__image {
+        width: 30%;
+        height: 100%;
+        margin-right: 40px;
+        box-shadow: 20px 20px $primary-color;
+        // min-width: 200px;
+    }
+    &__contents {
+        &--beside-image {
+            width: 65%;
+        }
     }
     &--grey {
         background-color: $primary-background-color;
