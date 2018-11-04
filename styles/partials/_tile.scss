@@ -1,9 +1,9 @@
 
 
 .tile {
-    padding: 20px;
+    padding: 35px;
     background: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     &__heading {
         @extend .section-blurb__heading;
         &--small {
@@ -12,5 +12,88 @@
         &--large {
             @extend .section-blurb__heading--large;
         }
+    }
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    &__image {
+        // flex: 1 0 200;
+        flex-grow: 2;
+        flex-basis: 250px;
+        margin-bottom: 35px;
+        // min-width: 50%;
+    }
+    &__contents {
+        flex-grow: 3;
+        flex-basis: 250px;
+    }
+    &__list-item--decorated {
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: "\2022";
+            color: $primary-color;
+            font-size: 3.5rem;
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+    }
+    &__date-and-author {
+        font-style: italic;
+        & .author-name,
+        &--archive {
+            color: $third-accent-color;
+        }
+    }
+    &--author-image {
+        display: flex;
+        & .author-image {
+            padding-right: 20px;
+        }
+    }
+    &--border {
+        border-bottom: 5px solid $primary-color;
+    }
+
+    & .paragraph {
+        padding-bottom: 0;
+    }
+} 
+
+@media (max-width: 1065px) {
+    .tile {
+        // &--flex {
+        //     flex-wrap: wrap;
+        // }
+        &__image{
+            margin-right: 35px;
+            margin-bottom: 0;
+            flex-basis: 180px;
+        } 
+        &__contents{
+            flex-basis: 180px;
+        }
+    }
+}
+
+@media (max-width: 625px) {
+    .tile {
+        // &--flex {
+        //     flex-wrap: wrap;
+        // }
+        &__image{
+            margin-right: 0;
+            margin-bottom: 35px;
+            // flex-basis: 180px;
+        } 
+        // &__contents{
+        //     flex-basis: 180px;
+        // }
     }
 }

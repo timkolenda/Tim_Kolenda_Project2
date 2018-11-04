@@ -18,6 +18,9 @@
             list-style: none;
             @include secondary-font(3rem);     
         }    
+        &--active {
+            color: #fff;
+        }
     }
     &__item-link {
         padding: 10px 20px;

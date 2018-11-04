@@ -2,14 +2,26 @@
 
 .blog {
     background: $primary-background-color;
+    padding-top: 100px;
     & .wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        // justify-content: space-between;
     }
     &__aside {
-        width: 30%;
+        flex: 1 0 250px;
+        margin-right: 35px;
     }
     &__main {
-        width: 68%;
+        flex: 1 0 480px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .blog {
+        &__aside{
+            margin-right: 0;
+        } 
     }
 }
