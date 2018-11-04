@@ -69,3 +69,20 @@
         top: 20px;
     }
 }
+
+
+@media (max-width: 1000px) {
+    .hero {
+        &--index {
+            height: 50vh;
+        }
+        &__element {
+            &--image {
+                display: none;
+            }
+            &--primary {
+                margin: auto;
+            }
+        }
+    }
+}

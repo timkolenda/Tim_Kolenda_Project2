@@ -1,0 +1,32 @@
+
+
+.form-styling {
+    border: 2px solid tomato;
+    flex-grow: 1;
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__user-info {
+        display: block;
+        border: none;
+        margin-bottom: 10px;
+        line-height: 65px;
+        padding-left: 20px;
+        width: 49%;
+    }
+    &__comments {
+        & [name="comments"]{
+            width: 100%;
+            padding: 20px;
+            border: none;
+            resize: none;
+            margin-bottom: 10px;
+        }
+    }
+    & .btn{
+        width: 100%;
+        border: none;
+    }
+}

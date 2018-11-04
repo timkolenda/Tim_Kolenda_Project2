@@ -85,7 +85,7 @@ a {
     max-width: 1280px;
     width: 80%;
     margin: 0 auto;
-    padding: 0 20px;
+    // padding: 0 20px;
 
 }
 
@@ -96,16 +96,12 @@ a {
     padding-bottom: 40px;
 }
 
-.tile {
-    padding: 20px;
-    background: #fff;
-    margin-bottom: 20px;
+
+@media (max-width: 1000px) {
+    .wrapper {
+        width: 90%;
+    }
 }
-
-// .logo {
-//     text-align: center;
-// }
-
 
 
 

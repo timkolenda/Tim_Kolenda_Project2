@@ -34,15 +34,16 @@
             </div>
         </section>        
     </header>
-    <main class="wrapper contact">
+    <main class="contact">
+        <div class="wrapper">
         <aside class="contact__aside">
-            <div class="tile">
+            <div class="tile tile--contacts">
                 <nav class="social-nav">
                     <ul class="social-nav__list">
-                        <li class="cocial-nav__list-item"><a href="#"><i></i></a></li>
-                        <li class="cocial-nav__list-item"><a href="#"><i></i></a></li>
-                        <li class="cocial-nav__list-item"><a href="#"><i></i></a></li>
-                        <li class="cocial-nav__list-item"><a href="#"><i></i></a></li>    
+                        <li class="social-nav__list-item"><a href="#" class="social-nav__list-item-link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-nav__list-item"><a href="#" class="social-nav__list-item-link"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social-nav__list-item"><a href="#" class="social-nav__list-item-link"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="social-nav__list-item"><a href="#" class="social-nav__list-item-link"><i class="fab fa-instagram"></i></a></li>    
                     </ul>
                 </nav>
                 <div class="tile__contents">
@@ -56,14 +57,22 @@
             </div>            
         </aside>
         <form action="" class="form-styling">
-            <label for="name" class="visuallyHidden"></label>
-            <input type="text" id="name" placeholder="name">
-            <label for="email" class="visuallyHidden"></label>
-            <input type="email" id="email" placeholder="email">
-            <label for="comments" class="visuallyHidden"></label>
-            <input type="text" id="comments" placeholder="comment">
+            <div class="form-styling__user">
+                <label for="name" class="visuallyHidden"></label>
+                <input type="text" name="user-name" class="form-styling__user-info" id="name" placeholder="Name">
+                <label for="email" class="visuallyHidden"></label>
+                <input type="email" name="user-email" class="form-styling__user-info" id="email" placeholder="Email">
+            </div>
+            <div class="form-styling__comments">
+                <label for="comments" class="visuallyHidden"></label>
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+            </div>
             <button class="btn">Submit</button>
         </form>
     </main>
+    </div>
+    <footer class="legal">
+        <p>Copyright &copy; 2018 Hackeryou</p>
+    </footer>
 </body>
 </html>

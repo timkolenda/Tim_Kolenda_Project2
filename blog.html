@@ -99,13 +99,17 @@
                     </div>
                 </div>
                 <form action="" class="form-styling">
-                    <label for="name-of-commenter" class="visuallyHidden"></label>
-                    <input type="text" id="name-of-commenter" placeholder="name">
-                    <label for="email-of-commenter" class="visuallyHidden"></label>
-                    <input type="email" id="email-of-commenter" placeholder="email">
-                    <label for="comments" class="visuallyHidden"></label>
-                    <input type="text" id="comments" placeholder="comment">
-                    <button class="btn">Post comment</button>
+                    <div class="form-styling__user">
+                        <label for="name" class="visuallyHidden"></label>
+                        <input type="text" name="user-name" class="form-styling__user-info" id="name" placeholder="Name">
+                        <label for="email" class="visuallyHidden"></label>
+                        <input type="email" name="user-email" class="form-styling__user-info" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-styling__comments">
+                        <label for="comments" class="visuallyHidden"></label>
+                        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+                    </div>
+                    <button class="btn">Submit</button>
                 </form>
             </section>
         </div>

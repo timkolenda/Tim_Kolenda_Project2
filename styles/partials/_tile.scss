@@ -4,8 +4,22 @@
     padding: 35px;
     background: #fff;
     margin-bottom: 30px;
-    &__heading {
+    .social-nav {
+        &__list {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        &__list-item {
+            padding-right: 20px;
+            font-size: 3rem;
+        }
+        &__list-item-link {
+            padding-right: 20px;
+            color: $primary-color;
+        }
+        &__heading {
         @extend .section-blurb__heading;
+        }
         &--small {
             @extend .section-blurb__heading--small;
         }
@@ -60,6 +74,9 @@
     &--border {
         border-bottom: 5px solid $primary-color;
     }
+    &--contacts {
+        margin-right: 35px;
+    }
 
     & .paragraph {
         padding-bottom: 0;
@@ -68,9 +85,6 @@
 
 @media (max-width: 1065px) {
     .tile {
-        // &--flex {
-        //     flex-wrap: wrap;
-        // }
         &__image{
             margin-right: 35px;
             margin-bottom: 0;
@@ -84,16 +98,9 @@
 
 @media (max-width: 625px) {
     .tile {
-        // &--flex {
-        //     flex-wrap: wrap;
-        // }
         &__image{
             margin-right: 0;
             margin-bottom: 35px;
-            // flex-basis: 180px;
         } 
-        // &__contents{
-        //     flex-basis: 180px;
-        // }
     }
 }
