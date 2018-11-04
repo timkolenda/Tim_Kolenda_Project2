@@ -1,7 +1,6 @@
 
 
 .blog-preview {
-    // background: #fff;
     &--first {
         background: linear-gradient(to right, $primary-accent-color 50%, rgba(0, 0, 0, 0) 50%);
         position: relative;
@@ -13,14 +12,13 @@
                 top: 70px;
             }
         }
-        & .blog-preview__graphic {
+        &__graphic {
             position: relative;
             top: -20px;
             right: 20px;
         }
-        & .blog-preview__content {
+        & .blog-preview__contents {
             position: relative;
-            top: 70px;
         }
     }    
     &--second {
@@ -58,55 +56,104 @@
     
 }
 
-@media (max-width: 1000px) {
-    // body {
-    //     // background: orange;
-    // }
+@media (max-width: 1100px) {
+
     .blog-preview {
+        .wrapper{
+            flex-direction: column;
+            width: 100%;
+        }
         &--first {
-            // background: linear-gradient(to right, $primary-accent-color 50%, rgba(0, 0, 0, 0) 50%);
+            background: none;
             position: static;
-            // top: -40px;
-            & .section-blurb {
-            padding: 70px 0 90px 100px;
-                &__contents {
-                    position: static;
-                    // top: 70px;
-                }
-            }
-            & .blog-preview__graphic {
-                position: static;
-                // top: -20px;
-                // right: 20px;
-            }
-            & .blog-preview__content {
-                position: static;
-                // top: 70px;
-            }
+            width: 100%;
         }    
-        &--second {
-            // background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, $primary-color 50%);
+        & .section-blurb {
+            padding: 0;
+            &__contents {
+                position: static;
+                width: 100%;
+            }
+        }
+        &__graphic {
             position: static;
-            // bottom: -40px;
+            width: 100%;
+            display: flex;
+            &--dog {
+                background-color: $primary-accent-color;
+            }
+            &--umbrella {
+                background-color: $primary-color;
+            }
+            &-image {
+                margin: auto;
+                width: 60%;
+                position: relative;
+                bottom: 30px;   
+            }
+        }
+        &__contents {
+            position: static;
+            width: 100%;
+            text-align: center;
+            padding: 80px 0;
+        }  
+        &--second {
+            background: none;
+            .wrapper {
+                flex-direction: column;
+            }
+            position: static;
             & .section-blurb {
-            padding: 70px 100px 90px 0;
-            // text-align: right;
+                padding: 0;                
                 &__contents {
                     position: static;
-                    // bottom: 90px;
-                }
+                    text-align: center;
+                }   
             }
-            // & .wrapper {
-            //     flex-direction: row-reverse;
-            // }
             & .blog-preview__graphic {
                 position: static;
-                // top: -20px;
-                // right: 20px;
             }
         } 
     }
+}
 
+@media (max-width: 700px) {
+    .blog-preview {
+        &--first,
+        &--second {
+            .wrapper {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+        }
+        &__contents {
+            padding: 50px 0;
+        }
+        &__graphic {
+            width: 100%;
+            &--dog,
+            &--umbrella {
+                background: none;
+            }
+            &-image{
+                width: 100%;
+                padding: 0;
+                position: static;
 
-
+                &--dog {
+                    border-top: 10px solid $primary-accent-color;
+                }
+                &--umbrella {
+                    border-top: 10px solid $primary-color;
+                }
+                .dog,
+                .umbrella {
+                    box-shadow: none;
+                }
+            }
+            
+        }
+    }
 }
