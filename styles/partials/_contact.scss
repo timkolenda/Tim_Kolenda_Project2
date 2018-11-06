@@ -4,5 +4,17 @@
     padding: 100px 0;
     .wrapper{
         display: flex;
-    }   
+    }
+    &__address-list-item {
+        line-height: 2;
+    }
+}
+
+@media (max-width: 850px){
+    .contact {
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+        }   
+    }
 }

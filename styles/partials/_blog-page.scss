@@ -2,7 +2,7 @@
 
 .blog {
     background: $primary-background-color;
-    padding-top: 100px;
+    padding: 100px 0;
     & .wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -19,8 +19,11 @@
 
 @media (max-width: 800px) {
     .blog {
-        &__aside{
+        &__aside {
             margin-right: 0;
         } 
+        &__main {
+            max-width: 100%;
+        }
     }
 }
