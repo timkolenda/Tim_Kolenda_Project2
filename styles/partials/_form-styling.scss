@@ -14,7 +14,7 @@
         margin-bottom: 10px;
         line-height: 65px;
         padding-left: 20px;
-        width: 49%;
+        width: 100%;
     }
     &__comments {
         & [name="comments"]{
@@ -29,4 +29,8 @@
         width: 100%;
         border: none;
     }
+}
+
+@media (max-width: 700px) {
+    
 }

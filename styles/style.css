@@ -324,7 +324,7 @@ a {
 
 .section-blurb {
   padding: 100px 0 120px 0; }
-  .section-blurb .wrapper {
+  .section-blurb__with-image {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -354,11 +354,66 @@ a {
       text-decoration: none;
       font-size: 3.2rem; }
 
+@media (max-width: 900px) {
+  .section-blurb {
+    text-align: center; }
+    .section-blurb__with-image {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .section-blurb__image {
+      width: 60%;
+      margin: 0 auto;
+      -webkit-box-shadow: 20px 20px #f6a823;
+      box-shadow: 20px 20px #f6a823;
+      margin-bottom: 80px; }
+    .section-blurb__contents--beside-image {
+      width: 100%; } }
+
+@media (max-width: 600px) {
+  .section-blurb {
+    padding: 50px 0 80px 0; }
+    .section-blurb .wrapper {
+      width: 100%; }
+    .section-blurb__with-image {
+      width: 95%; }
+    .section-blurb__image {
+      width: 100%;
+      border-top: 8px solid #f6a823;
+      -webkit-box-shadow: none;
+      box-shadow: none; } }
+
+@media (max-width: 400px) {
+  .section-blurb .paragraph {
+    display: none; }
+  .section-blurb__heading, .tile .social-nav__heading {
+    padding-bottom: 40px; } }
+
 .btn {
   background: #05afc1;
   padding: 20px;
   text-transform: uppercase;
   font-weight: bold; }
+
+.blog-preview__contents {
+  width: 50%; }
+
+.blog-preview__graphic {
+  position: relative;
+  width: 50%; }
+  .blog-preview__graphic--dog {
+    top: -20px;
+    right: 20px; }
+  .blog-preview__graphic--umbrella {
+    top: -20px;
+    right: 20px; }
 
 .blog-preview--first {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #a82706), color-stop(50%, rgba(0, 0, 0, 0)));
@@ -372,10 +427,6 @@ a {
     .blog-preview--first .section-blurb__contents {
       position: relative;
       top: 70px; }
-  .blog-preview--first__graphic {
-    position: relative;
-    top: -20px;
-    right: 20px; }
   .blog-preview--first .blog-preview__contents {
     position: relative; }
 
@@ -397,22 +448,12 @@ a {
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
-  .blog-preview--second .blog-preview__graphic {
-    position: relative;
-    top: -20px;
-    right: 20px; }
 
 .blog-preview--first .wrapper,
 .blog-preview--second .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.blog-preview__contents {
-  width: 50%; }
-
-.blog-preview__graphic {
-  width: 50%; }
 
 @media (max-width: 1100px) {
   .blog-preview .wrapper {
@@ -540,6 +581,7 @@ a {
       -ms-flex-align: center;
       align-items: center; }
   .site-map-nav .section-blurb {
+    text-align: left;
     padding: 0; }
     .site-map-nav .section-blurb__heading, .site-map-nav .tile .social-nav__heading, .tile .site-map-nav .social-nav__heading {
       border-bottom: 4px solid #f0efed; }
@@ -551,11 +593,11 @@ a {
       padding: 40px 0; }
     .site-map-nav__item {
       position: relative;
-      padding: none; }
+      padding: 0; }
     .site-map-nav__icon {
       position: absolute; }
-  li.site-map-nav__item {
-    padding: none; } }
+    .site-map-nav .section-blurb {
+      text-align: center; } }
 
 @media (max-width: 500px) {
   .site-map-nav__icon {
@@ -566,22 +608,10 @@ a {
       display: none; } }
 
 .gallery__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
   padding: 100px 0; }
-
-.gallery__item {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 31%;
-  min-width: 300px;
-  padding-bottom: 20px; }
 
 .blog {
   background: #f0efed;
@@ -712,7 +742,7 @@ a {
     margin-bottom: 10px;
     line-height: 65px;
     padding-left: 20px;
-    width: 49%; }
+    width: 100%; }
   .form-styling__comments [name="comments"] {
     width: 100%;
     padding: 20px;
