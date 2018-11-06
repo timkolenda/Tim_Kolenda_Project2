@@ -1,7 +1,11 @@
 
 
 .form-styling {
-    border: 2px solid tomato;
+    .user-name,
+    .user-email {
+        width: 49%;
+    }
+    // border: 2px solid tomato;
     flex-grow: 1;
     &__user {
         display: flex;
@@ -31,6 +35,39 @@
     }
 }
 
-@media (max-width: 700px) {
-    
+@media (max-width: 800px) {
+    .form-styling {
+    .user-name,
+    .user-email {
+        width: 100%;
+    }
+    border: 2px solid tomato;
+    flex-grow: 1;
+    &__user {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__user-info {
+        display: block;
+        border: none;
+        margin-bottom: 10px;
+        line-height: 65px;
+        padding-left: 20px;
+        width: 100%;
+    }
+    &__comments {
+        & [name="comments"]{
+            width: 100%;
+            padding: 20px;
+            border: none;
+            resize: none;
+            margin-bottom: 10px;
+        }
+    }
+    & .btn{
+        width: 100%;
+        border: none;
+    }
+}
 }
