@@ -23,11 +23,14 @@
                 <li class="header-nav__item header-nav__item--active"><a class="header-nav__item-link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <section class="hero--contact">
+        <section class="hero hero--contact">
             <div class="wrapper">
                 <div class="hero__element--secondary">
                     <h1 class="title title--contact">Get in touch</h1>
                 </div>
+            </div>
+            <div class="mobile-menu">
+                <h4 class="mobile-menu__button">Menu</h4>
             </div>
         </section>       
         <nav class="mobile-nav">
@@ -36,6 +39,9 @@
                 <li class="mobile-nav__item"><a class="mobile-nav__item-link" href="#about">About</a></li>
                 <li class="mobile-nav__item"><a class="mobile-nav__item-link" href="blog.html">Blog</a></li>
                 <li class="mobile-nav__item mobile-nav__item--active"><a class="mobile-nav__item-link" href="contact.html">Contact</a></li>
+                <li class="mobile-nav__item mobile-nav__item--close-nav">
+                    <h4>Close Menu</h4>
+                </li>
             </ul>
         </nav>
     </header>
@@ -83,5 +89,29 @@
     <footer class="legal">
         <p>Copyright &copy; 2018 Hackeryou</p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".mobile-menu").on("click", function () {
+                console.log("I'm clicked!");
+                $(".mobile-nav").addClass("nav-open");
+                $(".mobile-menu").addClass("hide-mobile-menu");
+            });
+
+            $(".mobile-nav__item--close-nav").on("click", function () {
+                console.log("I'm clicked!");
+                $(".mobile-nav").removeClass("nav-open");
+                $(".mobile-menu").removeClass("hide-mobile-menu");
+            });
+
+
+
+
+        });
+
+
+
+    </script>
 </body>
 </html>

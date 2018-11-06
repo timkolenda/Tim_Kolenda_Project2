@@ -101,6 +101,13 @@
 @media (max-width: 800px){
     .hero {
         position: relative;
+        background-image: url(../assets/home-image-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .mobile-menu {
             display: flex;
             width: 100%;
@@ -115,30 +122,15 @@
             }
         }
         &--index {
-            background-image: url(../assets/home-image-1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 25%;
-            display: flex;
-            flex-direction: column;
             height: 100vh;
-            // align-items: center;
             justify-content: space-between;
         }
         &--blog,
         &--contact {
-            background-image: url(../assets/blog-image-1.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 50vh;
-            display: flex;
-            align-items: flex-end;
-            // position: relative;
+            // height: 80vh;
+            height: 100vh;
         }
-        &--contact {
-            background-image: url(../assets/contact-image-1.jpg);
-        }
+ 
         &--index-flex-wrapper {
             display: flex;
             justify-content: space-between;
@@ -150,7 +142,6 @@
             margin: 0;
             padding-top: 50px;
             justify-content: flex-end;
-            // padding-right: 20px;
             position: relative;
             &::before {
                 content: "";
@@ -158,16 +149,11 @@
             }
         }
         &__element--secondary {
-            position: relative;
-            top: 30px;
-            
+            position: static;
+            display: flex;
+            justify-content: flex-end;   
+            text-align: left;
         }
-        // &__element--image {
-        //     width: 45.6%;
-        //     box-shadow: 20px 20px #fff;
-        //     position: relative;
-        //     top: 40px
-        // }
     }
 
     .title {
@@ -191,7 +177,8 @@
         }
         &--blog,
         &--contact {
-            @include secondary-font(8rem);
+            @include secondary-font(6rem);
+            color: white;
             position: relative;
             top: 20px;
         }

@@ -381,7 +381,21 @@ a {
 
 @media (max-width: 800px) {
   .hero {
-    position: relative; }
+    position: relative;
+    background-image: url(../assets/home-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .hero .mobile-menu {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -404,35 +418,12 @@ a {
         text-decoration: none;
         font-size: 3rem; }
     .hero--index {
-      background-image: url(../assets/home-image-1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 25%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
       height: 100vh;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; }
     .hero--blog, .hero--contact {
-      background-image: url(../assets/blog-image-1.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 50vh;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end; }
-    .hero--contact {
-      background-image: url(../assets/contact-image-1.jpg); }
+      height: 100vh; }
     .hero--index-flex-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -458,8 +449,14 @@ a {
         content: "";
         display: none; }
     .hero__element--secondary {
-      position: relative;
-      top: 30px; }
+      position: static;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      text-align: left; }
   .title {
     text-transform: uppercase; }
     .title--index {
@@ -486,7 +483,8 @@ a {
       color: #4f4f4f;
       font-weight: 400;
       text-decoration: none;
-      font-size: 8rem;
+      font-size: 6rem;
+      color: white;
       position: relative;
       top: 20px; } }
 
@@ -971,3 +969,5 @@ a {
   line-height: 2; }
   .legal p {
     margin: 0; }
+
+/*# sourceMappingURL=style.css.map */
