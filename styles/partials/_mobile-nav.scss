@@ -1,0 +1,40 @@
+
+.mobile-nav {
+    display: none;
+    // height: 40vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;  
+    // background: rgba(245, 168, 34, 0.541);
+    // padding-left: 30px;
+    // align-items: space-around;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 50vh;
+        width: 100%;
+        @include primary-font(3rem);
+        text-transform: uppercase;
+
+    }
+    &__item {
+        padding-left: 30px;
+        background: rgba(245, 168, 34, 0.541);
+        height: 20%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px dotted black;
+        &:hover {
+            cursor: pointer; 
+        }
+        &--active {
+            background-color: rgba(168, 38, 6, 0.562);
+        }
+        
+    }
+}
+
+.mobile-nav.nav-open {
+    display: flex;
+}
