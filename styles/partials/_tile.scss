@@ -44,6 +44,10 @@
     &__contents {
         flex-grow: 3;
         flex-basis: 250px;
+        .link-to-about {
+            color: #285e64;
+            font-weight: bold;
+        }
     }
     &__list-item--decorated {
         padding-left: 30px;

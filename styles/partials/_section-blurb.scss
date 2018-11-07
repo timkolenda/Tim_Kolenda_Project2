@@ -10,7 +10,6 @@
         height: 100%;
         margin-right: 40px;
         box-shadow: 20px 20px $primary-color;
-        // min-width: 200px;
     }
     &__contents {
         &--beside-image {
@@ -35,7 +34,6 @@
 @media (max-width:900px) {
     .section-blurb {
         text-align: center;
-    // padding: 100px 0 120px 0;
         &__with-image {
             display: flex;
             flex-direction: column;
@@ -43,31 +41,15 @@
         }
         &__image {
             width: 60%;
-            // height: 100%;
             margin: 0 auto;
             box-shadow: 20px 20px $primary-color;
             margin-bottom: 80px;
-            // min-width: 200px;
         }
         &__contents {
             &--beside-image {
                 width: 100%;
-                // text-align: center;
             }
         }
-        // &--grey {
-        //     background-color: $primary-background-color;
-        // }
-        // &__heading {
-            // text-transform: uppercase;
-            // padding: 0 0 10px 0;
-            // &--large {
-            //     @include primary-font(4.2rem)
-            // }
-            // &--small {
-            //     @include primary-font(3.2rem)
-            // }
-        // }
     }
 }
 
