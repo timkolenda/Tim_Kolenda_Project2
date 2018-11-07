@@ -572,7 +572,12 @@ a {
   background: #05afc1;
   padding: 20px;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+  .btn:hover {
+    background: #06dcf3; }
 
 .blog-preview__contents {
   width: 50%; }
